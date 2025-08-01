@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using DevExpress.Maui;
+using Microsoft.Extensions.Logging;
 
 namespace MauiApp3;
 
@@ -9,6 +10,11 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .UseDevExpress()
+            .UseDevExpressControls()
+            .UseDevExpressEditors()
+            .UseDevExpressPdf()
+            .UseDevExpressCollectionView()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
